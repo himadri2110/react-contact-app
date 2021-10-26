@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./Header";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
+import Footer from "./Footer";
 
 function App() {
   const LOCAL_STORAGE_KEY = "contacts";
@@ -42,6 +43,7 @@ function App() {
       <Header />
       <AddContact addContactHandler={addContactHandler} />
       <ContactList contacts={contacts} getContactId={removeContactHandler} />
+      <Footer />
     </div>
   );
 }
