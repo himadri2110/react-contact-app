@@ -2,9 +2,9 @@ import React from "react";
 import user from "../images/user.png";
 
 const ContactCard = (props) => {
-  const { name, email } = props.contact;
+  const { id, name, email } = props.contact;
+  console.log(id, name, email);
 
-  console.log(name, email);
   return (
     <div className="contact-card">
       <img src={user} alt="user" />
@@ -14,7 +14,10 @@ const ContactCard = (props) => {
         <div className="card-email">{props.contact.email}</div>
       </div>
 
-      <i className="far fa-trash-alt"></i>
+      <i
+        className="far fa-trash-alt"
+        onClick={() => props.clickHandler(id)}
+      ></i>
     </div>
   );
 };
