@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 :root {
-  --background: #EDEDED;
-  --blue: #a8dadc;
-  --dark-blue: #457b9d;
+  --background: #f0f0f0;
+  --light-purple: #9bb1ff;
+  --purple: #7180ff;
 }
 
 * {
@@ -11,36 +11,33 @@
   padding: 0;
   box-sizing: border-box;
   border-radius: 3px;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
+  min-height: 100vh;
+  position: relative;
+  margin: auto;
+  padding: 1rem;
+  max-width: 700px;
+  overflow-x: hidden;
   background-color: var(--background);
-}
-
-.App {
-  text-align: center;
 }
 
 .header {
   text-align: center;
 }
 
-.add-contact, .contact-list {
+.add-contact,
+.contact-list {
   margin: 1rem 0;
   padding: 1rem;
-  border: 1px solid black;
-  background-color: var(--blue);
+  background-color: var(--light-purple);
 }
 
 .field {
   margin: 0.5rem 0;
   display: flex;
-
 }
 
 label {
@@ -49,23 +46,19 @@ label {
 
 input {
   padding: 0.25rem;
-  background-color: var(--blue);
+  background-color: var(--background);
 }
 
-input:focus {
-  outline: none;
-}
-
-input, button {
-  border-width: 0.01rem;
+input,
+button {
+  border: none;
 }
 
 button {
   width: 5rem;
   margin: 0.25rem 0;
   padding: 0.25rem;
-  cursor: pointer;
-  background-color: var(--dark-blue);
+  background-color: var(--purple);
 }
 
 .contact-card {
@@ -73,7 +66,7 @@ button {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 8fr 1fr;
-  background-color: var(--dark-blue);
+  background-color: var(--purple);
 }
 
 img {
@@ -83,7 +76,8 @@ img {
   border-radius: 50%;
 }
 
-i {
+i,
+button {
   cursor: pointer;
 }
 
@@ -93,4 +87,18 @@ i {
 
 .card-email {
   font-size: 0.8rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  /* top: 1s0px; */
+  padding: 2rem;
+  /* left: 50%; */
+
+  margin-top: auto;
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
 }
